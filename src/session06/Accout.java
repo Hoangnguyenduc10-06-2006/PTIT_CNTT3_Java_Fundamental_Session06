@@ -16,7 +16,13 @@ public class Accout {
     }
 
     public void printAccout(){
-        System.out.printf( "username: %s \n email: %s",this.username,this.email);
+       int hidepass= this.password.length();
+        System.out.printf( "username: %s \n email: %s \n pass:",this.username,this.email);
+        for (int i =0 ;i<hidepass ;i++){
+            System.out.print( "x");
+            if (i == hidepass-1){
+                System.out.print( "\n");
+            }
+        }
     }
-
 }
